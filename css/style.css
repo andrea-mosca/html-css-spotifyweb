@@ -43,3 +43,8 @@ ul{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
