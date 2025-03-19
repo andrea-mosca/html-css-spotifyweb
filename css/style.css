@@ -1,6 +1,7 @@
 :root{
     --player-height: 90px;
-    --sidebar-width: 80px;
+    --sidebar-width: 50px;
+    --header-main-height: 100px;
 
 }
 /* RESET */
@@ -57,14 +58,10 @@ ul{
 }
 /* STRUCTURE */
 
-#sidebar{
-    background-color: black;
-    width: var(--sidebar-width);
-    display: flex;
-    flex-direction: column;
-}
+
 #header-main{
     background-color: #080b12;
+    height: var(--header-main-height);
 }
 #player{
     background-color: #282828;
@@ -78,16 +75,69 @@ ul{
     width: calc(100% - var(--sidebar-width));
 }
 /* SIDEBAR  */
+[ID*='sidebar-']{
+    padding: 5px 0;
+}
+#sidebar{
+    background-color: black;
+    color: white;
+    width: var(--sidebar-width);
+    overflow: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column
+}
+#sidebar-logo{
+    display: none;
+}
 
+#sidebar-home span{
+    display: none;
+}
 
+#sidebar-playlist{
+    flex-grow: 1;
+    
+}
+#sidebar-download::after{
+    content: '';
+    display: none;
+    width: 100%;
+    height: 0;
+    border: 1px solid grey;
+}
 
 /* RESPONSIVE */
-@media screen and(min-width:576px) { /*small*/
+@media screen and (min-width: 576px) { 
+    :root{
+        --sidebar-width: 200px;
+    }
+    
+    #sidebar-download::after{
+        display: block;
+    }
+    #sidebar-logosmall{
+        display: none;
+    }
+    #sidebar-logo{
+        display: block;
+    }
+    #sidebar-home{
+        display: flex;
+    }
+    #sidebar-home span{
+        display: inline-block;
+    }
+    #sidebar-home img{
+        width: 20%;
+    }
+
     
 }
-@media screen and(min-width:768px) {/*medium*/
+@media screen and (min-width: 768px) {
     
 }
-@media screen and(min-width:992px) {/*large*/
+@media screen and (min-width: 992px) {
     
 }
