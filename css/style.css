@@ -60,6 +60,8 @@ ul{
 #sidebar{
     background-color: black;
     width: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
 }
 #header-main{
     background-color: #080b12;
@@ -75,6 +77,7 @@ ul{
 #main-content{
     width: calc(100% - var(--sidebar-width));
 }
+/* SIDEBAR  */
 
 
 
