@@ -83,8 +83,8 @@ ul{
     color: white;
     width: var(--sidebar-width);
     overflow: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
     display: flex;
     flex-direction: column
 }
@@ -95,18 +95,61 @@ ul{
 #sidebar-home span{
     display: none;
 }
+#sidebar-search span{
+    display: none;
+    filter: invert(50%);
+}
+#sidebar-search img{
+    filter: invert(50%);
+}
+
+#sidebar-library span{
+    display: none;
+    filter: invert(50%);
+}
+#sidebar-library img{
+    filter: invert(50%);
+}
 
 #sidebar-playlist{
     flex-grow: 1;
-    
 }
-#sidebar-download::after{
+#sidebar-playlist #playlist{
+    display: none;
+    filter: invert(50%);
+}
+
+#playlist li{
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+#sidebar-download span{
+    display: none;
+    filter: invert(50%);
+}
+#sidebar-download img{
+    filter: invert(50%);
+}
+#sidebar-utent span{
+    display: none;
+}
+
+
+
+/* #sidebar-download::after{
     content: '';
     display: none;
     width: 100%;
     height: 0;
     border: 1px solid grey;
-}
+} */
 
 /* RESPONSIVE */
 @media screen and (min-width: 576px) { 
@@ -114,22 +157,68 @@ ul{
         --sidebar-width: 200px;
     }
     
-    #sidebar-download::after{
+    /* #sidebar-download::after{
         display: block;
-    }
+    } */
     #sidebar-logosmall{
         display: none;
     }
     #sidebar-logo{
         display: block;
     }
+    
     #sidebar-home{
         display: flex;
+        align-items: center;
     }
     #sidebar-home span{
         display: inline-block;
     }
     #sidebar-home img{
+        width: 20%;
+    }
+    #sidebar-search{
+        display: flex;
+        align-items: center;
+    }
+    #sidebar-search span{
+        display: inline-block;
+    }
+    #sidebar-search img{
+        width: 20%;
+    }
+    #sidebar-library{
+        display: flex;
+        align-items: center;
+    }
+    #sidebar-library span{
+        display: inline-block;
+    }
+    #sidebar-library img{
+        width: 20%;
+    }
+    #sidebar-playlist #playlist{
+        display: block;
+    }
+    
+    #sidebar-download{
+        display: flex;
+        align-items: center;
+    }
+    #sidebar-download span{
+        display: inline-block;
+    }
+    #sidebar-download img{
+        width: 20%;
+    }
+    #sidebar-utent{
+        display: flex;
+        align-items: center;
+    }
+    #sidebar-utent span{
+        display: inline-block;
+    }
+    #sidebar-utent img{
         width: 20%;
     }
 
