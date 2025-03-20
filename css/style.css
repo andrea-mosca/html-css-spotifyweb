@@ -20,6 +20,7 @@ img{
 }
 a{
     text-decoration: none;
+    color: lightgray;
 }
 ul{
     list-style-type: none;
@@ -72,7 +73,7 @@ ul{
 #main-content{
     width: calc(100% - var(--sidebar-width));
 }
-/* SIDEBAR  */
+/* -----SIDEBAR-----  */
 [ID*='sidebar-']{
     padding: 5px 0;
 }
@@ -151,7 +152,7 @@ ul{
     display: none;
 }
 
-/* player */
+/* -----player----- */
 #player{
     background-color: #282828;
     height: var(--player-height);
@@ -185,18 +186,27 @@ ul{
 #control-music{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 .song-bar{
     background-color: #5c5c5c;
     width: 100%;
     height: 5px;
     margin: 0 5px;
+    display: flex;
+    align-items: center;
 }
 .song-level{
     background-color: white;
     height: 100%;
     width: 30%;
+}
+.song-cursor{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
 }
 #player-options{
     display: flex;
@@ -209,7 +219,24 @@ ul{
 .volume-level .song-bar{
     width: 50px;
 }
+/* player hover  */
 
+.fa-heart, 
+.fa-folder{
+    color: lightgray;
+}
+.fa-heart:hover,.fa-folder:hover, #player-song a:hover{
+    color: white;
+}
+.fa-circle-play:hover{
+    font-size: xx-large;
+}
+.song-bar:hover .song-cursor{
+    display: block;
+}
+.song-bar:hover .song-level{
+    background-color: yellowgreen;
+}
 
 
 /* RESPONSIVE */
