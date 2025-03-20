@@ -33,7 +33,7 @@ ul{
     background-color:#ff000022;
     border: 2px dashed red;
 }
-.container{
+/* .container{
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
@@ -50,12 +50,13 @@ ul{
 [class*='col'] {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-}
+} */
 .wrapper{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
 }
+
 /* STRUCTURE */
 
 
@@ -63,10 +64,7 @@ ul{
     background-color: #080b12;
     height: var(--header-main-height);
 }
-#player{
-    background-color: #282828;
-    height: var(--player-height);
-}
+
 #top-content{
     height: calc(100vh - var(--player-height));
     display: flex;
@@ -83,15 +81,21 @@ ul{
     color: white;
     width: var(--sidebar-width);
     overflow: auto;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding: 1rem 0;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    
+}
+.side-pad{
+    padding: 0 0.5rem;
 }
 #sidebar-logo{
     display: none;
 }
 
+.active{
+    border-left: 5px solid #bdff30;
+}
 #sidebar-home span{
     display: none;
 }
@@ -125,11 +129,6 @@ ul{
 
 
 
-
-
-
-
-
 #sidebar-download span{
     display: none;
     filter: invert(50%);
@@ -137,19 +136,65 @@ ul{
 #sidebar-download img{
     filter: invert(50%);
 }
-#sidebar-utent span{
-    display: none;
-}
-
-
-
-/* #sidebar-download::after{
+#sidebar-divisor::after{
     content: '';
     display: none;
     width: 100%;
     height: 0;
     border: 1px solid grey;
-} */
+}
+#sidebar-utent img{
+    background-color: #808080;
+    border-radius: 50%;
+}
+#sidebar-utent span{
+    display: none;
+}
+
+/* player */
+#player{
+    background-color: #282828;
+    height: var(--player-height);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+#player-song{
+    display: flex;
+}
+#img-song-played img{
+   width: 50px;
+}
+#player-control{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#control-buttons{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#control-music{
+    display: flex;
+    align-items: center;
+}
+.song-bar{
+    background-color: #5c5c5c;
+    height: 5px;
+    width: 150px;
+    margin: 0 5px;
+}
+.song-level{
+    background-color: white;
+    width: 30px;
+    height: 100%;
+}
+
+
 
 /* RESPONSIVE */
 @media screen and (min-width: 576px) { 
@@ -157,9 +202,9 @@ ul{
         --sidebar-width: 200px;
     }
     
-    /* #sidebar-download::after{
+    #sidebar-divisor::after{
         display: block;
-    } */
+    }
     #sidebar-logosmall{
         display: none;
     }

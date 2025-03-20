@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- CDN AWESOME LINK  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- STYLE LINK  -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -13,7 +13,7 @@
     <div class="wrapper">
         <div id="top-content">
             <div id="sidebar">
-                <div>
+                <div class="side-pad">
                     <div id="sidebar-logosmall">
                         <img src="./img/logo-small.svg" alt="">
                     </div>
@@ -21,19 +21,19 @@
                     </div>
                 
                 </div>
-                <div id="sidebar-home">
+                <div id="sidebar-home" class="active">
                     <img src="./img/home.svg" alt="">
                     <span>Home</span>
                 </div>
-                <div id="sidebar-search">
+                <div id="sidebar-search" class="side-pad">
                     <img src="./img/search.svg" alt="">
                     <span>Cerca</span>
                 </div>
-                <div id="sidebar-library">
+                <div id="sidebar-library" class="side-pad">
                     <img src="./img/libreria.svg" alt="">
                     <span>La tua libreria</span>
                 </div>
-                <div id="sidebar-playlist">
+                <div id="sidebar-playlist" class="side-pad">
                     <div id="playlist">
                         <h4>PLAYLIST</h4> 
                         <ul>
@@ -54,7 +54,8 @@
                     <img src="./img/download.svg" alt="">
                     <span>Installa app</span>
                 </div>
-                <div id="sidebar-utent">
+                <div id="sidebar-divisor" class="side-pad"></div>
+                <div id="sidebar-utent" class="side-pad">
                     <img src="./img/profile.svg" alt="">
                     <span>Joan Doan</span>
                 </div>
@@ -65,7 +66,93 @@
                 <div id="main"></div>
             </div>
         </div>
-        <div id="player"></div>
+        <div id="player" class="debug">
+            <div id="player-song" class="debug">
+                <div id="img-song-played"><img src="./img/sinister.jpeg" alt="">
+                </div>
+                <div>
+                    <h4>Sinister</h4>
+                    <div>
+                        <span>Brano</span>
+                        <span>Nome</span>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-light fa-heart"></i>
+                    <i class="fa-light fa-folder"></i>
+                </div>
+            </div>
+            <div id="player-control" class="debug">
+                <div id="control-buttons">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play fa-xl"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+                <div id="control-music">
+                    <div>0:25</div>
+                    <div class="song-bar">
+                        <div class="song-level"></div>
+                    </div>
+                    <div>4:35</div>
+                </div>
+            </div>
+            <div id="player-options" class="debug"></div>
+        </div>
     </div>
 </body>
 </html>
+
+<!-- <div id="logo">
+    <div id="sidebar-logosmall">
+        <img src="./img/logo-small.svg" alt="">
+    </div>
+    <div id="sidebar-logo"><img src="./img/logo.svg" alt="">
+    </div>
+</div>
+
+<nav id="sidebar-nav">
+    <div id="sidebar-home">
+        <img src="./img/home.svg" alt="">
+        <span>Home</span>
+    </div>
+    <div id="sidebar-search">
+        <img src="./img/search.svg" alt="">
+        <span>Cerca</span>
+    </div>
+    <div id="sidebar-library">
+        <img src="./img/libreria.svg" alt="">
+        <span>La tua libreria</span>
+    </div>
+</nav>
+
+<div id="sidebar-playlist">
+    <div id="playlist">
+        <h4>PLAYLIST</h4> 
+        <ul>
+            <li><i class="fa-solid fa-plus"></i>
+                Crea Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+        </ul>
+        
+    </div>    
+</div>
+
+<div id="sidebar-footer">
+    <div id="sidebar-download">
+        <img src="./img/download.svg" alt="">
+        <span>Installa app</span>
+    </div>
+    <div id="sidebar-divisor"></div>
+    <div id="sidebar-utent">
+        <img src="./img/profile.svg" alt="">
+        <span>Joan Doan</span>
+    </div>
+</div> -->
