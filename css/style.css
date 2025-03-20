@@ -164,6 +164,23 @@ ul{
 #sidebar-utent span{
     display: none;
 }
+/* TOP CONTENT  */
+#header-main{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#header-main button{
+    padding: 10px 50px;
+    border-radius: 50px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    align-self: center;
+}
+#header-main button:hover{
+    width: 250px;
+    height: 50px;
+}
 
 
 /* -----player----- */
