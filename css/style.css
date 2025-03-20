@@ -20,7 +20,7 @@ img{
 }
 a{
     text-decoration: none;
-    color: lightgray;
+    color: gray;
 }
 ul{
     list-style-type: none;
@@ -164,7 +164,7 @@ ul{
 #sidebar-utent span{
     display: none;
 }
-/* TOP CONTENT  */
+/* -----TOP CONTENT-----  */
 #header-main{
     display: flex;
     flex-direction: row-reverse;
@@ -180,6 +180,22 @@ ul{
 #header-main button:hover{
     width: 250px;
     height: 50px;
+}
+/* -----MAIN CONTENT----- */
+#main{
+    color: gray;
+}
+#main nav{
+    text-align: center;
+    padding-top: 15px;
+}
+#main nav li{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+#main nav li:hover{
+    color: white;
 }
 
 
@@ -254,7 +270,7 @@ ul{
 
 .fa-heart, 
 .fa-folder{
-    color: lightgray;
+    color: gray;
 }
 .fa-heart:hover,.fa-folder:hover, #player-song a:hover{
     color: white;
