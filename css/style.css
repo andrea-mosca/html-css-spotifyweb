@@ -94,9 +94,7 @@ ul{
     display: none;
 }
 
-.active{
-    border-left: 5px solid #bdff30;
-}
+
 #sidebar-home span{
     display: none;
 }
@@ -107,6 +105,11 @@ ul{
 #sidebar-search img{
     filter: invert(50%);
 }
+#sidebar-search:hover img,
+#sidebar-search:hover span{
+    filter: none;
+}
+
 
 #sidebar-library span{
     display: none;
@@ -114,6 +117,10 @@ ul{
 }
 #sidebar-library img{
     filter: invert(50%);
+}
+#sidebar-library:hover img,
+#sidebar-library:hover span{
+    filter: none;
 }
 
 #sidebar-playlist{
@@ -124,9 +131,11 @@ ul{
     filter: invert(50%);
 }
 
+
 #playlist li{
     padding-top: 10px;
 }
+
 
 
 
@@ -136,6 +145,10 @@ ul{
 }
 #sidebar-download img{
     filter: invert(50%);
+}
+#sidebar-download:hover img,
+#sidebar-download:hover span{
+    filter: none;
 }
 #sidebar-divisor::after{
     content: '';
@@ -151,6 +164,7 @@ ul{
 #sidebar-utent span{
     display: none;
 }
+
 
 /* -----player----- */
 #player{
@@ -254,7 +268,10 @@ ul{
     #sidebar-logo{
         display: block;
     }
-    
+    .active{
+        border-left: 5px solid #bdff30;
+        
+    }
     #sidebar-home{
         display: flex;
         align-items: center;
