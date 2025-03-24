@@ -10,13 +10,14 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #141922;
 }
 img{
     max-width: 100%;
-    display: block;
+    /* display: block; */
 }
 a{
     text-decoration: none;
@@ -74,82 +75,64 @@ ul{
     width: calc(100% - var(--sidebar-width));
 }
 /* -----SIDEBAR-----  */
-[ID*='sidebar-']{
-    padding: 5px 0;
-}
+
 #sidebar{
     background-color: black;
-    color: white;
+    color: gray;
     width: var(--sidebar-width);
     overflow: auto;
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
-    
 }
-.side-pad{
-    padding: 0 0.5rem;
+#sidebar h4{
+    color: white;
 }
+
+#sidebar img{
+    width: 70%;
+}
+#logo, #sidebar-footer, #sidebar-search, #sidebar-library{
+    padding: 0 10px;
+}
+#sidebar-home{
+    padding: 0 10px;
+    color: white;
+}
+#sidebar-playlist{
+    padding: 0 15px;
+}
+
 #sidebar-logo{
     display: none;
 }
-
 
 #sidebar-home span{
     display: none;
 }
 #sidebar-search span{
     display: none;
-    filter: invert(50%);
+    
 }
-#sidebar-search img{
-    filter: invert(50%);
-}
-#sidebar-search:hover img,
-#sidebar-search:hover span{
-    filter: none;
-}
-
 
 #sidebar-library span{
     display: none;
-    filter: invert(50%);
-}
-#sidebar-library img{
-    filter: invert(50%);
-}
-#sidebar-library:hover img,
-#sidebar-library:hover span{
-    filter: none;
+    
 }
 
-#sidebar-playlist{
-    flex-grow: 1;
-}
 #sidebar-playlist #playlist{
     display: none;
-    filter: invert(50%);
+   
 }
 #playlist li{
     padding-top: 10px;
 }
-#playlist li:hover{
-
-}
-
-
-
-
 #sidebar-download span{
     display: none;
-    filter: invert(50%);
+    
 }
-#sidebar-download img{
-    filter: invert(50%);
-}
-#sidebar-download:hover img,
-#sidebar-download:hover span{
-    filter: none;
+#sidebar-footer{
+    margin-top: auto;
 }
 #sidebar-divisor::after{
     content: '';
@@ -162,8 +145,25 @@ ul{
     background-color: #808080;
     border-radius: 50%;
 }
-#sidebar-utent span{
+#sidebar-utent h4{
     display: none;
+}
+/* HOVER sidebar  */
+#sidebar-search:hover{
+    color: white;
+    cursor: pointer;
+}
+#sidebar-library:hover{
+    color: white;
+    cursor: pointer;
+}
+#playlist li:hover{
+    color: white;
+    cursor: pointer;
+}
+#sidebar-download span:hover{
+    color: white;
+    cursor: pointer;
 }
 /* -----TOP CONTENT-----  */
 #header-main{
@@ -181,6 +181,7 @@ ul{
 #header-main button:hover{
     width: 250px;
     height: 50px;
+    cursor: pointer;
 }
 /* -----MAIN CONTENT----- */
 /* section1 */
@@ -200,6 +201,7 @@ ul{
 }
 #main nav li:hover{
     color: white;
+    cursor: pointer;
 }
 .text-underline{
     position: relative;
@@ -234,6 +236,7 @@ ul{
     background: #00000030;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 
@@ -329,15 +332,19 @@ ul{
 }
 .fa-heart:hover,.fa-folder:hover, #player-song a:hover{
     color: white;
+    cursor: pointer;
 }
 .fa-circle-play:hover{
     font-size: xx-large;
+    cursor: pointer;
 }
 .song-bar:hover .song-cursor{
     display: block;
+    cursor: pointer;
 }
 .song-bar:hover .song-level{
     background-color: lime;
+    cursor: pointer;
 }
 
 
@@ -346,9 +353,14 @@ ul{
     :root{
         --sidebar-width: 200px;
     }
+    #sidebar-home{
+        
+        border-left: 5px solid lime;
+    }
     
     #sidebar-divisor::after{
         display: block;
+        margin: 10px 0;
     }
     #sidebar-logosmall{
         display: none;
@@ -393,7 +405,11 @@ ul{
     #sidebar-playlist #playlist{
         display: block;
     }
-    
+    #playlist .fa-plus{
+        background-color: gray;
+        color: black;
+        padding: 10px;
+    }
     #sidebar-download{
         display: flex;
         align-items: center;
@@ -408,7 +424,7 @@ ul{
         display: flex;
         align-items: center;
     }
-    #sidebar-utent span{
+    #sidebar-utent h4{
         display: inline-block;
     }
     #sidebar-utent img{
